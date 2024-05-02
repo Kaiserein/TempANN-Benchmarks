@@ -9,12 +9,12 @@ class FaissHNSW(Faiss):
         self._metric = metric
         self.method_param = method_param
 
-    def fit(self, X):
+    def fit(self, X):   
         self.index = faiss.IndexHNSWFlat(len(X[0]), self.method_param["M"])
         self.index.hnsw.efConstruction = self.method_param["efConstruction"]
         self.index.verbose = True
 
-        if self._metric == "angular":
+        if self._metric == "angular":   
             X = X / np.linalg.norm(X, axis=1)[:, np.newaxis]
         if X.dtype != np.float32:
             X = X.astype(np.float32)

@@ -1,0 +1,45 @@
+float:
+  any:
+  - base_args: ['@metric']
+    constructor: FaissNSG
+    disabled: false
+    docker_tag: ann-benchmarks-faiss_nsg
+    module: ann_benchmarks.algorithms.faiss_nsg
+    name: nsg(faiss)
+    run_groups:
+      R-12:
+        arg_groups: [{R: 12}]
+        args: {}
+        query_args: [[10, 20, 40, 80, 120, 200, 400, 600, 800]]
+      R-16:
+        arg_groups: [{R: 16}]
+        args: {}
+        query_args: [[10, 20, 40, 80, 120, 200, 400, 600, 800]]
+      R-24:
+        arg_groups: [{R: 24}]
+        args: {}
+        query_args: [[10, 20, 40, 80, 120, 200, 400, 600, 800]]
+      R-36:
+        arg_groups: [{R: 36}]
+        args: {}
+        query_args: [[10, 20, 40, 80, 120, 200, 400, 600, 800]]
+      R-4:
+        arg_groups: [{R: 4}]
+        args: {}
+        query_args: [[10, 20, 40, 80, 120, 200, 400, 600, 800]]
+      R-48:
+        arg_groups: [{R: 48}]
+        args: {}
+        query_args: [[10, 20, 40, 80, 120, 200, 400, 600, 800]]
+      R-64:
+        arg_groups: [{R: 64}]
+        args: {}
+        query_args: [[10, 20, 40, 80, 120, 200, 400, 600, 800]]
+      R-8:
+        arg_groups: [{R: 8}]
+        args: {}
+        query_args: [[10, 20, 40, 80, 120, 200, 400, 600, 800]]
+      R-96:
+        arg_groups: [{R: 96}]
+        args: {}
+        query_args: [[10, 20, 40, 80, 120, 200, 400, 600, 800]]
