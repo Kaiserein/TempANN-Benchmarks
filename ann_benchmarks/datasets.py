@@ -569,6 +569,23 @@ def dbpedia_entities_openai_1M(out_fn, n = None):
 
     write_output(X_train, X_test, out_fn, "angular")
 
+def TencentCloud768(out_fn: str, d: int) -> None:
+    import h5py
+    url = "https://vector-db-backup-1-1310738255.cos.ap-chengdu.myqcloud.com/datasets/chinese%sw-768-angular.hdf5" % d
+    fn = os.path.join("data", "chinese%sw-768-angular.hdf5" % d)
+    download(url, fn)
+    with h5py.File(fn, 'r') as src_file:
+        with h5py.File(out_fn , 'w') as dst_file:
+            for item in src_file:
+                data = src_file[item][:]
+                dst_file.create_dataset(item, data=data)         
+                for name, value in src_file[item].attrs.items():
+                    dst_file[item].attrs[name] = value
+                if isinstance(src_file[item], h5py.Group):
+                    dst_file.create_group(item)
+                    for subgroup in src_file[item]:
+                        dst_file[item].copy(src_file[item][subgroup], dst_file[item])
+                         
 
 DATASETS: Dict[str, Callable[[str], None]] = {
     "deep-image-96-angular": deep_image,
@@ -598,6 +615,10 @@ DATASETS: Dict[str, Callable[[str], None]] = {
     "movielens1m-jaccard": movielens1m,
     "movielens10m-jaccard": movielens10m,
     "movielens20m-jaccard": movielens20m,
+    #new ones
+    "chinese100w-768-angular": lambda out_fn: TencentCloud768(out_fn, "100" ),
+    "chinese500w-768-angular": lambda out_fn: TencentCloud768(out_fn, "500" ),
+    "chinese1000w-768-angular": lambda out_fn: TencentCloud768(out_fn, "1000" ),
 }
 
 DATASETS.update({
