@@ -11,7 +11,7 @@ import docker
 import numpy
 import psutil
 
-from ann_benchmarks.algorithms.base.module import BaseANN
+from .algorithms.base.module import BaseANN
 
 from .definitions import Definition, instantiate_algorithm
 from .datasets import DATASETS, get_dataset
