@@ -2,7 +2,7 @@ float:
   angular:
   - base_args: ['@metric', '@dimension']
     constructor: ElasticsearchKNN
-    disabled: false
+    disabled: true
     docker_tag: ann-benchmarks-elasticsearch
     module: ann_benchmarks.algorithms.elasticsearch
     name: elasticsearch
@@ -14,7 +14,7 @@ float:
   euclidean:
   - base_args: ['@metric', '@dimension']
     constructor: ElasticsearchKNN
-    disabled: false
+    disabled: true
     docker_tag: ann-benchmarks-elasticsearch
     module: ann_benchmarks.algorithms.elasticsearch
     name: elasticsearch

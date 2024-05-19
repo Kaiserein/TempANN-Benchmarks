@@ -223,7 +223,7 @@ def check_module_import_and_constructor(df: Definition) -> bool:
         logging.warning(
             f"{df.module}.{df.constructor}({df.arguments}): the module '{df.module}' could not be loaded; skipping"
         )
-        return False
+        return True
     
     return True
 

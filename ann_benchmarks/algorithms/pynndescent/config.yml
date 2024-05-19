@@ -2,7 +2,7 @@ bit:
   hamming:
   - base_args: ['@metric']
     constructor: PyNNDescent
-    disabled: false
+    disabled: true
     docker_tag: ann-benchmarks-pynndescent
     module: ann_benchmarks.algorithms.pynndescent
     name: pynndescent
@@ -30,7 +30,7 @@ bit:
   jaccard:
   - base_args: ['@metric']
     constructor: PyNNDescent
-    disabled: false
+    disabled: true
     docker_tag: ann-benchmarks-pynndescent
     module: ann_benchmarks.algorithms.pynndescent
     name: pynndescent
@@ -59,7 +59,7 @@ float:
   angular:
   - base_args: ['@metric']
     constructor: PyNNDescent
-    disabled: false
+    disabled: true
     docker_tag: ann-benchmarks-pynndescent
     module: ann_benchmarks.algorithms.pynndescent
     name: pynndescent
@@ -93,7 +93,7 @@ float:
   euclidean:
   - base_args: ['@metric']
     constructor: PyNNDescent
-    disabled: false
+    disabled: true
     docker_tag: ann-benchmarks-pynndescent
     module: ann_benchmarks.algorithms.pynndescent
     name: pynndescent

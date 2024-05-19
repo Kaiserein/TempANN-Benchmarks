@@ -2,7 +2,7 @@ bit:
   hamming:
   - base_args: [euclidean, hnsw]
     constructor: NmslibReuseIndex
-    disabled: false
+    disabled: true
     docker_tag: ann-benchmarks-nmslib
     module: ann_benchmarks.algorithms.nmslib
     name: hnsw(nmslib)
@@ -28,7 +28,7 @@ bit:
   jaccard:
   - base_args: ['@metric', hnsw]
     constructor: NmslibReuseIndex
-    disabled: false
+    disabled: true
     docker_tag: ann-benchmarks-nmslib
     module: ann_benchmarks.algorithms.nmslib
     name: hnsw(nmslib)
@@ -53,7 +53,7 @@ bit:
             2000]]
   - base_args: ['@metric', sw-graph]
     constructor: NmslibReuseIndex
-    disabled: false
+    disabled: true
     docker_tag: ann-benchmarks-nmslib
     module: ann_benchmarks.algorithms.nmslib
     name: SW-graph(nmslib)
@@ -85,7 +85,7 @@ float:
   angular:
   - base_args: ['@metric', hnsw]
     constructor: NmslibReuseIndex
-    disabled: false
+    disabled: true
     docker_tag: ann-benchmarks-nmslib
     module: ann_benchmarks.algorithms.nmslib
     name: hnsw(nmslib)
@@ -110,7 +110,7 @@ float:
             2000]]
   - base_args: ['@metric', sw-graph]
     constructor: NmslibReuseIndex
-    disabled: false
+    disabled: true
     docker_tag: ann-benchmarks-nmslib
     module: ann_benchmarks.algorithms.nmslib
     name: SW-graph(nmslib)
@@ -170,7 +170,7 @@ float:
         query_args: [[1, 2, 5, 10, 20, 30, 50, 70, 90, 120, 160]]
   - base_args: ['@metric', sw-graph]
     constructor: NmslibReuseIndex
-    disabled: false
+    disabled: true
     docker_tag: ann-benchmarks-nmslib
     module: ann_benchmarks.algorithms.nmslib
     name: SW-graph(nmslib)

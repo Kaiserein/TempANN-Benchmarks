@@ -2,7 +2,7 @@ float:
   angular:
   - base_args: ['@metric', '@dimension']
     constructor: VespaHnsw
-    disabled: false
+    disabled: true
     docker_tag: ann-benchmarks-vespa
     module: ann_benchmarks.algorithms.vespa
     name: hnsw(vespa)

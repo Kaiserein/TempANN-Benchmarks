@@ -2,7 +2,7 @@ float:
   any:
   - base_args: ['@metric']
     constructor: MRPT
-    disabled: false
+    disabled: true
     docker_tag: ann-benchmarks-mrpt
     module: ann_benchmarks.algorithms.mrpt
     name: mrpt

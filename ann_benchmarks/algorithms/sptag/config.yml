@@ -2,7 +2,7 @@ float:
   any:
   - base_args: ['@metric']
     constructor: Sptag
-    disabled: false
+    disabled: true
     docker_tag: ann-benchmarks-sptag
     module: ann_benchmarks.algorithms.sptag
     name: sptag

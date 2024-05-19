@@ -2,7 +2,7 @@ bit:
   jaccard:
   - base_args: ['@metric']
     constructor: Puffinn
-    disabled: false
+    disabled: true
     docker_tag: ann-benchmarks-puffinn
     module: ann_benchmarks.algorithms.puffinn
     name: puffinn

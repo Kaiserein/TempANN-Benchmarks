@@ -2,7 +2,7 @@ float:
   any:
   - base_args: ['@metric', '@dimension']
     constructor: Milvus
-    disabled: false
+    disabled: true
     docker_tag: ann-benchmarks-milvus
     module: ann_benchmarks.algorithms.milvus
     name: Milvus(Knowhere)

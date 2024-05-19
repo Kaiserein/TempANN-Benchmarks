@@ -2,7 +2,7 @@ float:
   angular:
   - base_args: ['@metric']
     constructor: Vamana
-    disabled: false
+    disabled: true
     docker_tag: ann-benchmarks-diskann
     module: ann_benchmarks.algorithms.diskann
     name: vamana(diskann)
@@ -27,7 +27,7 @@ float:
         query_args: [[10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120]]
   - base_args: ['@metric']
     constructor: VamanaPQ
-    disabled: false
+    disabled: true
     docker_tag: ann-benchmarks-diskann_pq
     module: ann_benchmarks.algorithms.diskann
     name: vamana-pq(diskann)
@@ -71,7 +71,7 @@ float:
   euclidean:
   - base_args: ['@metric']
     constructor: Vamana
-    disabled: false
+    disabled: true
     docker_tag: ann-benchmarks-diskann
     module: ann_benchmarks.algorithms.diskann
     name: vamana(diskann)
@@ -96,7 +96,7 @@ float:
         query_args: [[10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120]]
   - base_args: ['@metric']
     constructor: VamanaPQ
-    disabled: false
+    disabled: true
     docker_tag: ann-benchmarks-diskann_pq
     module: ann_benchmarks.algorithms.diskann
     name: vamana-pq(diskann)

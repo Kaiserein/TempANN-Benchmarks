@@ -2,7 +2,7 @@ float:
   any:
   - base_args: ['@metric']
     constructor: Voyager
-    disabled: false
+    disabled: true
     docker_tag: ann-benchmarks-voyager
     module: ann_benchmarks.algorithms.voyager
     name: voyager 

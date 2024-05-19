@@ -2,7 +2,7 @@ float:
   any:
   - base_args: ['@metric']
     constructor: Redisearch
-    disabled: false
+    disabled: true
     docker_tag: ann-benchmarks-redisearch
     module: ann_benchmarks.algorithms.redisearch
     name: redisearch

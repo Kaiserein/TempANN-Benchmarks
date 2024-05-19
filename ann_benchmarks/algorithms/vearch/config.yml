@@ -2,7 +2,7 @@ float:
   angular:
   - base_args: ['@metric']
     constructor: VearchIndex
-    disabled: false
+    disabled: true
     docker_tag: ann-benchmarks-vearch
     module: ann_benchmarks.algorithms.vearch
     name: vearch
@@ -15,7 +15,7 @@ float:
   euclidean:
   - base_args: ['@metric']
     constructor: VearchIndex
-    disabled: false
+    disabled: true
     docker_tag: ann-benchmarks-vearch
     module: ann_benchmarks.algorithms.vearch
     name: vearch
